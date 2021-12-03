@@ -20,9 +20,6 @@ import img6 from '../../assets/images/small/12.png'
 import img7 from '../../assets/images/small/13.png'
 import img8 from '../../assets/images/small/14.png'
 import p1 from '../../assets/images/page-img/p1.jpg'
-import s1 from '../../assets/images/page-img/s1.jpg'
-import s2 from '../../assets/images/page-img/s2.jpg'
-import s3 from '../../assets/images/page-img/s3.jpg'
 import s4 from '../../assets/images/page-img/s4.jpg'
 import s5 from '../../assets/images/page-img/s5.jpg'
 import p2 from '../../assets/images/page-img/p2.jpg'
@@ -41,13 +38,15 @@ import img9 from '../../assets/images/small/img-1.jpg'
 import img10 from '../../assets/images/small/img-2.jpg'
 import loader from '../../assets/images/page-img/page-load-loader.gif'
 
-import { CommunityRepository, FileRepository } from '@amityco/js-sdk'
+import { CommunityRepository } from '@amityco/js-sdk'
+
+import { CommunityCard } from './community'
 
 const Index = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [communitiesList, setCommunitiesList] = useState([]);
+    const [communitiesList, setCommunitiesList] = useState([])
 
     useEffect(() => {
         const trendingLiveCollection = CommunityRepository.getTopTrendingCommunities();
@@ -55,31 +54,6 @@ const Index = () => {
             setCommunitiesList(models);
         });
     }, [])
-
-    const renderCommunity = (() => {
-        let temp = []
-        for (let i = 0; i < (communitiesList.length > 3 ? 3 : communitiesList.length); i++) {
-            let file;
-            const liveObject = FileRepository.getFile(communitiesList[i].avatarFileId);
-            console.log(communitiesList[i].avatarFileId)
-            liveObject.on('dataUpdated', (updatedModel) => {
-                file = updatedModel
-                console.log(file)
-            });
-            liveObject.on('dataError', (error) => {
-                console.error('Can not get the file', error);
-            });
-            temp.push(
-                <li key={i} className="d-flex mb-3 align-items-center active">
-                    <img src={s2} alt="story-img" className="rounded-circle img-fluid" />
-                    <div className="stories-data ms-3">
-                        <h5>{communitiesList[i].displayName}</h5>
-                        <p className="mb-0">{communitiesList[i].description}</p>
-                    </div>
-                </li>)
-        }
-        return temp;
-    })
 
     return (
         <>
@@ -106,17 +80,17 @@ const Index = () => {
                                     <ul className=" post-opt-block d-flex list-inline m-0 p-0 flex-wrap">
                                         <li className="me-3 mb-md-0 mb-2">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img1} alt="icon" className="img-fluid me-2" /> Photo
+                                                <img src={img1} alt="icon" className="img-fluid me-2" /> Photo/Video
                                             </Link>
                                         </li>
                                         <li className="me-3 mb-md-0 mb-2">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img2} alt="icon" className="img-fluid me-2" /> Video
+                                                <img src={img2} alt="icon" className="img-fluid me-2" /> Tag Friend
                                             </Link>
                                         </li>
                                         <li className="me-3">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img3} alt="icon" className="img-fluid me-2" /> Create Live
+                                                <img src={img3} alt="icon" className="img-fluid me-2" /> Feeling/Activity
                                             </Link>
                                         </li>
                                         <li>
@@ -1158,10 +1132,12 @@ const Index = () => {
                                             </div>
                                         </li>
                                         {(communitiesList.length > 0) ?
-                                            renderCommunity()
+                                            communitiesList.map((item, i) => {
+                                                if (i < 3)
+                                                    return <CommunityCard key={i} communitiesList={item} />
+                                            })
                                             : null}
                                     </ul>
-                                    {/*<Link to="#" className="btn btn-primary d-block mt-3">See All</Link> */}
                                 </Card.Body>
                             </Card>
                             <Card>

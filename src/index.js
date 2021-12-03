@@ -10,13 +10,15 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
 //reducer
 import Store from './store'
+const dotenv = require('dotenv')
+dotenv.config()
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Provider store={Store}>
-            <App />
-        </Provider>
+      <Provider store={Store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
