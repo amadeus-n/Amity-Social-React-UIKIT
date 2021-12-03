@@ -106,17 +106,17 @@ const Index = () => {
                                     <ul className=" post-opt-block d-flex list-inline m-0 p-0 flex-wrap">
                                         <li className="me-3 mb-md-0 mb-2">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img1} alt="icon" className="img-fluid me-2" /> Photo/Video
+                                                <img src={img1} alt="icon" className="img-fluid me-2" /> Photo
                                             </Link>
                                         </li>
                                         <li className="me-3 mb-md-0 mb-2">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img2} alt="icon" className="img-fluid me-2" /> Tag Friend
+                                                <img src={img2} alt="icon" className="img-fluid me-2" /> Video
                                             </Link>
                                         </li>
                                         <li className="me-3">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img3} alt="icon" className="img-fluid me-2" /> Feeling/Activity
+                                                <img src={img3} alt="icon" className="img-fluid me-2" /> Create Live
                                             </Link>
                                         </li>
                                         <li>

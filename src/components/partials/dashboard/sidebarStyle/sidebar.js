@@ -41,40 +41,41 @@ const Sidebar = () => {
                         <li className={`${location.pathname === '/dashboards/app/friend-list' ? 'active' : ''}`}>
                            <Link to="/dashboards/app/friend-list" ><i className="las la-user-friends"></i><span>Friend List</span></Link>
                         </li>
-                        <li className={`${location.pathname === '/dashboard/app/friend-profile' ? 'active' : ''}`}>
+                        {/* <li className={`${location.pathname === '/dashboard/app/friend-profile' ? 'active' : ''}`}>
                            <Link to="/dashboard/app/friend-profile" ><i className="las la-user-friends"></i><span>Friend Profile</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboards/app/groups' || location.pathname === '/dashboards/app/group-detail' ? 'active' : '' }` }>
-                           <Link to="/dashboards/app/groups" ><i className="las la-users"></i><span>Group</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboards/app/profile-images' ? 'active' : ''}`}>
-                           <Link to="/dashboards/app/profile-images" ><i className="las la-image"></i><span>Profile Image</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboards/app/profile-videos' ? 'active' : ''}`}>
-                           <Link to="/dashboards/app/profile-videos" ><i className="las la-video"></i><span>Profile Video</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboards/app/profile-events' ? 'active' : ''}`}>
-                           <Link to="/dashboards/app/profile-events" ><i className="las la-film"></i><span>Profile Events</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboard/app/profile-badges' ? 'active' : ''}`}>
-                           <Link to="/dashboard/app/profile-badges" ><i className="las la-certificate"></i><span>Profile Badges</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboard/app/profile-forum' ? 'active' : ''}`}>
-                           <Link to="/dashboard/app/profile-forum" ><i className="lab la-wpforms"></i><span>Profile Forum</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboard/app/notification' ? 'active' : ''}`}>
-                           <Link to="/dashboard/app/notification" ><i className="las la-bell"></i><span>Notification</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboard/app/file' ? 'active' : ''}`}>
-                           <Link to="/dashboard/app/file" ><i className="las la-file"></i><span>Files</span></Link>
-                        </li>
+                        </li> */}
                         <li className={`${location.pathname === '/dashboard/app/friend-request' ? 'active' : ''}`}>
                            <Link to="/dashboard/app/friend-request" ><i className="las la-anchor"></i><span>Friend Request</span></Link>
                         </li>
+                        <li className={`${location.pathname === '/dashboards/app/groups' || location.pathname === '/dashboards/app/group-detail' ? 'active' : '' }` }>
+                           <Link to="/dashboards/app/groups" ><i className="las la-users"></i><span>Communities</span></Link>
+                        </li>
+                        {/* <li className={`${location.pathname === '/dashboards/app/profile-images' ? 'active' : ''}`}>
+                           <Link to="/dashboards/app/profile-images" ><i className="las la-image"></i><span>Profile Image</span></Link>
+                        </li> */}
+                        {/* <li className={`${location.pathname === '/dashboards/app/profile-videos' ? 'active' : ''}`}>
+                           <Link to="/dashboards/app/profile-videos" ><i className="las la-video"></i><span>Profile Video</span></Link>
+                        </li> */}
+                        {/* <li className={`${location.pathname === '/dashboards/app/profile-events' ? 'active' : ''}`}>
+                           <Link to="/dashboards/app/profile-events" ><i className="las la-film"></i><span>Profile Events</span></Link>
+                        </li> */}
+                        {/* <li className={`${location.pathname === '/dashboard/app/profile-badges' ? 'active' : ''}`}>
+                           <Link to="/dashboard/app/profile-badges" ><i className="las la-certificate"></i><span>Profile Badges</span></Link>
+                        </li> */}
+                        {/* <li className={`${location.pathname === '/dashboard/app/profile-forum' ? 'active' : ''}`}>
+                           <Link to="/dashboard/app/profile-forum" ><i className="lab la-wpforms"></i><span>Profile Forum</span></Link>
+                        </li> */}
+                        {/* <li className={`${location.pathname === '/dashboard/app/notification' ? 'active' : ''}`}>
+                           <Link to="/dashboard/app/notification" ><i className="las la-bell"></i><span>Notification</span></Link>
+                        </li> */}
+                        {/* <li className={`${location.pathname === '/dashboard/app/file' ? 'active' : ''}`}>
+                           <Link to="/dashboard/app/file" ><i className="las la-file"></i><span>Files</span></Link>
+                        </li> */}
+                       
                         <li className={`${location.pathname === '/dashboard/app/chat' ? 'active' : ''}`}>
                            <Link to="/dashboard/app/chat"><i className="lab la-rocketchat"></i><span>Chat</span></Link>
                         </li>
-                        <li className={`${location.pathname === '/dashboard/app/todo' ? 'active' : ''}`}>
+                        {/* <li className={`${location.pathname === '/dashboard/app/todo' ? 'active' : ''}`}>
                            <Link to="/dashboard/app/todo" ><i className="las la-check-circle"></i><span>Todo</span></Link>
                         </li>
                         <li className={`${location.pathname === '/dashboards/app/calendar' ? 'active' : ''}`}>
@@ -85,11 +86,11 @@ const Sidebar = () => {
                         </li>
                         <li className={`${location.pathname === '/dashboards/app/weather' ? 'active' : ''}`}>
                            <Link to="/dashboards/app/weather" ><i className="ri-snowy-line"></i><span>Weather</span></Link>
-                        </li>
-                        <li className={`${location.pathname === '/dashboards/app/music' ? 'active' : ''}`}>
+                        </li> */}
+                        {/* <li className={`${location.pathname === '/dashboards/app/music' ? 'active' : ''}`}>
                            <Link to="/dashboards/app/music" ><i className="ri-play-circle-line"></i><span>Music</span></Link>
-                        </li>
-                        <Accordion.Item as="li" className={`${location.pathname === '/dashboard/blog/blog-grid' || location.pathname === '/dashboard/blog/blog-list' || location.pathname === '/dashboard/blog/blog-detail' ?  'active' : ''}`} eventKey="sidebar-blog"  >
+                        </li> */}
+                        {/* <Accordion.Item as="li" className={`${location.pathname === '/dashboard/blog/blog-grid' || location.pathname === '/dashboard/blog/blog-list' || location.pathname === '/dashboard/blog/blog-detail' ?  'active' : ''}`} eventKey="sidebar-blog"  >
                            <CustomToggle eventKey="sidebar-blog" onClick={(activeKey) => setActiveMenu(activeKey)}>
                                  <i className="lab la-blogger"></i>
                                  <span>Blog</span>
@@ -114,8 +115,8 @@ const Sidebar = () => {
                                  </li>
                               </ul>
                            </Accordion.Collapse>
-                        </Accordion.Item>
-                        <Accordion.Item as="li" className={`${location.pathname === '/dashboards/store/store-category-grid' || location.pathname === '/dashboards/store/store-category-list'|| location.pathname === '/dashboards/store/store-checkout' || location.pathname === '/dashboards/store/store-detail' ?  'active' : ''}`}  eventKey="sidebar-store"  >
+                        </Accordion.Item> */}
+                        {/* <Accordion.Item as="li" className={`${location.pathname === '/dashboards/store/store-category-grid' || location.pathname === '/dashboards/store/store-category-list'|| location.pathname === '/dashboards/store/store-checkout' || location.pathname === '/dashboards/store/store-detail' ?  'active' : ''}`}  eventKey="sidebar-store"  >
                            <CustomToggle eventKey="sidebar-store" onClick={(activeKey) => setActiveMenu(activeKey)}>
                               <i className="las la-store"></i>
                               <span>Store</span>
@@ -145,8 +146,8 @@ const Sidebar = () => {
                                  </li>
                               </ul>
                            </Accordion.Collapse>
-                        </Accordion.Item>
-                        <Accordion.Item as="li" className={`${location.pathname === '/dashboard/Email/email' || location.pathname === '/dashboard/Email/email-compose'?  'active' : ''}`}  eventKey="sidebar-email"  >
+                        </Accordion.Item> */}
+                        {/* <Accordion.Item as="li" className={`${location.pathname === '/dashboard/Email/email' || location.pathname === '/dashboard/Email/email-compose'?  'active' : ''}`}  eventKey="sidebar-email"  >
                            <CustomToggle eventKey="sidebar-email" onClick={(activeKey) => setActiveMenu(activeKey)}>
                               <i className="ri-mail-line"></i>
                               <span>Email</span>
@@ -166,8 +167,8 @@ const Sidebar = () => {
                                  </li>
                               </ul>
                            </Accordion.Collapse>
-                        </Accordion.Item>
-                        <Accordion.Item as="li" className={`${location.pathname === '/dashboard/ui-kit/ui-color' || location.pathname === '/dashboard/ui-kit/ui-typography' || location.pathname === '/dashboard/ui-kit/ui-alerts' || location.pathname === '/dashboard/ui-kit/ui-badges'|| location.pathname === '/dashboard/ui-kit/ui-breadcrumb'||  location.pathname === '/dashboard/ui-kit/ui-buttons' ||location.pathname === '/dashboard/ui-kit/ui-cards' || location.pathname === '/dashboard/ui-kit/ui-carousel' || location.pathname === '/dashboard/ui-kit/ui-embed-video' || location.pathname === '/dashboard/ui-kit/ui-grid'|| location.pathname === '/dashboard/ui-kit/ui-images'|| location.pathname === '/dashboard/ui-kit/ui-list-groups' || location.pathname === '/dashboard/ui-kit/ui-notifications'|| location.pathname === '/dashboard/ui-kit/ui-modal' || location.pathname === '/dashboard/ui-kit/ui-pagination' ||  location.pathname === '/dashboard/ui-kit/ui-popovers' || location.pathname === '/dashboard/ui-kit/ui-progressbars'|| location.pathname === '/dashboard/ui-kit/ui-tabs'|| location.pathname === '/dashboard/ui-kit/ui-tooltips'|| location.pathname === '/dashboard/form/form-element'||  location.pathname === '/dashboard/form/form-validation'|| location.pathname === '/dashboard/form/form-switch'  || location.pathname === '/dashboard/form/form-checkbox' || location.pathname === '/dashboard/form/form-radio'||  location.pathname === '/dashboard/form/form-wizard'|| location.pathname === '/dashboard/form/form-wizard-validate'|| location.pathname === '/dashboard/form/form-wizard-vertical' || location.pathname === '/dashboard/table/tables-basic' || location.pathname === '/dashboard/table/data-table' || location.pathname === '/dashboard/table/table-editable'|| location.pathname === '/dashboard/icon/fontawesome-5' || location.pathname === '/dashboard/icon/lineawesome'|| location.pathname === '/dashboard/icon/remixicon'?   'active' : ''}`}  eventKey="sidebar-ui"  >
+                        </Accordion.Item> */}
+                        {/* <Accordion.Item as="li" className={`${location.pathname === '/dashboard/ui-kit/ui-color' || location.pathname === '/dashboard/ui-kit/ui-typography' || location.pathname === '/dashboard/ui-kit/ui-alerts' || location.pathname === '/dashboard/ui-kit/ui-badges'|| location.pathname === '/dashboard/ui-kit/ui-breadcrumb'||  location.pathname === '/dashboard/ui-kit/ui-buttons' ||location.pathname === '/dashboard/ui-kit/ui-cards' || location.pathname === '/dashboard/ui-kit/ui-carousel' || location.pathname === '/dashboard/ui-kit/ui-embed-video' || location.pathname === '/dashboard/ui-kit/ui-grid'|| location.pathname === '/dashboard/ui-kit/ui-images'|| location.pathname === '/dashboard/ui-kit/ui-list-groups' || location.pathname === '/dashboard/ui-kit/ui-notifications'|| location.pathname === '/dashboard/ui-kit/ui-modal' || location.pathname === '/dashboard/ui-kit/ui-pagination' ||  location.pathname === '/dashboard/ui-kit/ui-popovers' || location.pathname === '/dashboard/ui-kit/ui-progressbars'|| location.pathname === '/dashboard/ui-kit/ui-tabs'|| location.pathname === '/dashboard/ui-kit/ui-tooltips'|| location.pathname === '/dashboard/form/form-element'||  location.pathname === '/dashboard/form/form-validation'|| location.pathname === '/dashboard/form/form-switch'  || location.pathname === '/dashboard/form/form-checkbox' || location.pathname === '/dashboard/form/form-radio'||  location.pathname === '/dashboard/form/form-wizard'|| location.pathname === '/dashboard/form/form-wizard-validate'|| location.pathname === '/dashboard/form/form-wizard-vertical' || location.pathname === '/dashboard/table/tables-basic' || location.pathname === '/dashboard/table/data-table' || location.pathname === '/dashboard/table/table-editable'|| location.pathname === '/dashboard/icon/fontawesome-5' || location.pathname === '/dashboard/icon/lineawesome'|| location.pathname === '/dashboard/icon/remixicon'?   'active' : ''}`}  eventKey="sidebar-ui"  >
                            <CustomToggle eventKey="sidebar-ui" onClick={(activeKey) => setActiveMenu(activeKey)}>
                               <i className="ri-focus-2-line"></i>
                               <span>Ui-Elements</span>
@@ -397,8 +398,8 @@ const Sidebar = () => {
                                  </Accordion.Item>
                               </Accordion>
                            </Accordion.Collapse>
-                        </Accordion.Item>
-                        <Accordion.Item as="li" className={`${location.pathname === '/auth/sign-in' || location.pathname === '/auth/sign-up' || location.pathname === '/auth/recoverpw' || location.pathname === '/auth/confirm-mail'|| location.pathname === '/auth/lock-screen'||  location.pathname === '/dashboard/extrapages/pages-timeline' ||location.pathname === '/dashboard/extrapages/pages-invoice' || location.pathname === '/dashboard/extrapages/blankpage' || location.pathname === '/errors/error404' || location.pathname === '/errors/error500'|| location.pathname === '/dashboard/extrapages/pages-pricing'|| location.pathname === '/dashboard/extrapages/pages-pricing-one' || location.pathname === '/extra-pages/pages-maintenance'|| location.pathname === '/extra-pages/pages-comingsoon' || location.pathname === '/dashboard/extrapages/pages-faq' ?   'active' : ''}`}    eventKey="sidebar-pages"  >
+                        </Accordion.Item> */}
+                        {/* <Accordion.Item as="li" className={`${location.pathname === '/auth/sign-in' || location.pathname === '/auth/sign-up' || location.pathname === '/auth/recoverpw' || location.pathname === '/auth/confirm-mail'|| location.pathname === '/auth/lock-screen'||  location.pathname === '/dashboard/extrapages/pages-timeline' ||location.pathname === '/dashboard/extrapages/pages-invoice' || location.pathname === '/dashboard/extrapages/blankpage' || location.pathname === '/errors/error404' || location.pathname === '/errors/error500'|| location.pathname === '/dashboard/extrapages/pages-pricing'|| location.pathname === '/dashboard/extrapages/pages-pricing-one' || location.pathname === '/extra-pages/pages-maintenance'|| location.pathname === '/extra-pages/pages-comingsoon' || location.pathname === '/dashboard/extrapages/pages-faq' ?   'active' : ''}`}    eventKey="sidebar-pages"  >
                            <CustomToggle eventKey="sidebar-pages" onClick={(activeKey) => setActiveMenu(activeKey)}>
                            <i className="ri-pages-line"></i><span>Pages</span><i className="ri-arrow-right-s-line iq-arrow-right"></i>
                            </CustomToggle>
@@ -479,7 +480,7 @@ const Sidebar = () => {
                                  </Accordion.Item>
                               </Accordion>
                            </Accordion.Collapse>
-                        </Accordion.Item>
+                        </Accordion.Item> */}
                      </Accordion>
                   </nav>
                   <div className="p-5"></div>
