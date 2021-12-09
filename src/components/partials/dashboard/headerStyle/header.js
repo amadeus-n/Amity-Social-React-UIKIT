@@ -1,9 +1,9 @@
-import React from 'react'
-import { Navbar, Dropdown, Nav, Form, Card, Image} from 'react-bootstrap'
+import React, { useEffect } from 'react'
+import { Navbar, Dropdown, Nav, Form, Card, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 //image
-import logo from '../../../../assets/images/logo.png'
+import logo from '../../../../assets/images/amity-logo-banner.png'
 import user1 from '../../../../assets/images/user/1.jpg'
 import user2 from '../../../../assets/images/user/02.jpg'
 import user3 from '../../../../assets/images/user/03.jpg'
@@ -11,10 +11,26 @@ import user4 from '../../../../assets/images/user/04.jpg'
 import user5 from '../../../../assets/images/user/05.jpg'
 import Button from '@restart/ui/esm/Button'
 
+import { UserRepository, DataStatus } from '@amityco/js-sdk'
+
 const Header = () => {
-    
-    const minisidebar =() =>{
+
+    const minisidebar = () => {
         document.body.classList.toggle('sidebar-main')
+    }
+
+    useEffect(() => {
+        console.log(UserRepository.toString())
+        // getUserInfo().then(data => { console.log(data) })
+    }, [])
+
+    async function getUserInfo(userId) {
+        return new Promise(resolve => {
+            const userObject = UserRepository.getUser(userId);
+            if (userObject.dataStatus === DataStatus.Fresh) {
+                resolve(userObject.model);
+            }
+        })
     }
 
     return (
@@ -24,8 +40,8 @@ const Header = () => {
                     <Navbar expand="lg" variant="light" className="p-0">
                         <div className="iq-navbar-logo d-flex justify-content-between">
                             <Link to="/">
-                                <Image src={logo} className="img-fluid" alt=""/>
-                                <span>SocialV</span>
+                                <Image src={logo} className="img-fluid" alt="" />
+                                <span>Amity</span>
                             </Link>
                             <div className="iq-menu-bt align-self-center">
                                 <div className="wrapper-menu" onClick={minisidebar}>
@@ -40,7 +56,7 @@ const Header = () => {
                                 <Link className="search-link" to="#">
                                     <i className="ri-search-line"></i>
                                 </Link>
-                                <input type="text" className="text search-input" placeholder="Search here..."/>
+                                <input type="text" className="text search-input" placeholder="Search here..." />
                             </Form>
                         </div>
                         <Navbar.Toggle as="button">
@@ -69,7 +85,7 @@ const Header = () => {
                                                 <div className="iq-friend-request">
                                                     <div className="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
                                                         <div className="d-flex align-items-center">
-                                                            <Image className="avatar-40 rounded" src={user1} alt=""/>
+                                                            <Image className="avatar-40 rounded" src={user1} alt="" />
                                                             <div className="ms-3">
                                                                 <h6 className="mb-0 ">Jaques Amole</h6>
                                                                 <p className="mb-0">40 friends</p>
@@ -86,7 +102,7 @@ const Header = () => {
                                                 <div className="iq-friend-request">
                                                     <div className="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
                                                         <div className="d-flex align-items-center">
-                                                            <Image className="avatar-40 rounded" src={user2} alt=""/>
+                                                            <Image className="avatar-40 rounded" src={user2} alt="" />
                                                             <div className="ms-3">
                                                                 <h6 className="mb-0 ">Lucy Tania</h6>
                                                                 <p className="mb-0">12 friends</p>
@@ -103,7 +119,7 @@ const Header = () => {
                                                 <div className="iq-friend-request">
                                                     <div className="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
                                                         <div className="d-flex align-items-center">
-                                                            <Image className="avatar-40 rounded" src={user3} alt=""/>
+                                                            <Image className="avatar-40 rounded" src={user3} alt="" />
                                                             <div className="ms-3">
                                                                 <h6 className="mb-0 ">Manny Petty</h6>
                                                                 <p className="mb-0">3 friends</p>
@@ -123,7 +139,7 @@ const Header = () => {
                                                     <div className="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
                                                         <div className="d-flex align-items-center">
                                                             <Image className="avatar-40 rounded" src={user4}
-                                                                alt=""/>
+                                                                alt="" />
                                                             <div className="ms-3">
                                                                 <h6 className="mb-0 ">Marsha Mello</h6>
                                                                 <p className="mb-0">15 friends</p>
@@ -161,7 +177,7 @@ const Header = () => {
                                             <Card.Body className="p-0">
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
-                                                        <Image className="avatar-40 rounded" src={user1} alt=""/>
+                                                        <Image className="avatar-40 rounded" src={user1} alt="" />
                                                     </div>
                                                     <div className="ms-3 w-100">
                                                         <h6 className="mb-0 ">Emma Watson Bni</h6>
@@ -173,7 +189,7 @@ const Header = () => {
                                                 </Link>
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
-                                                        <Image className="avatar-40 rounded" src={user2} alt=""/>
+                                                        <Image className="avatar-40 rounded" src={user2} alt="" />
                                                     </div>
                                                     <div className="ms-3 w-100">
                                                         <h6 className="mb-0 ">New Customer is join</h6>
@@ -185,7 +201,7 @@ const Header = () => {
                                                 </Link>
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
-                                                        <Image className="avatar-40 rounded" src={user3} alt=""/>
+                                                        <Image className="avatar-40 rounded" src={user3} alt="" />
                                                     </div>
                                                     <div className="ms-3 w-100">
                                                         <h6 className="mb-0 ">Two customer is left</h6>
@@ -197,7 +213,7 @@ const Header = () => {
                                                 </Link>
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
-                                                        <Image className="avatar-40 rounded" src={user4} alt=""/>
+                                                        <Image className="avatar-40 rounded" src={user4} alt="" />
                                                     </div>
                                                     <div className="ms-3 w-100">
                                                         <h6 className="mb-0 ">New Mail from Fenny</h6>
@@ -227,7 +243,7 @@ const Header = () => {
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
                                                         <div className="d-flex align-items-center justify-content-center">
-                                                            <Image className="avatar-40 rounded" src={user1} alt=""/>
+                                                            <Image className="avatar-40 rounded" src={user1} alt="" />
                                                         </div>
                                                         <div className=" w-100 ms-3">
                                                             <h6 className="mb-0 ">Bni Emma Watson</h6>
@@ -238,7 +254,7 @@ const Header = () => {
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
                                                         <div className="d-flex align-items-center">
-                                                            <Image className="avatar-40 rounded" src={user2} alt=""/>
+                                                            <Image className="avatar-40 rounded" src={user2} alt="" />
                                                         </div>
                                                         <div className="ms-3">
                                                             <h6 className="mb-0 ">Lorem Ipsum Watson</h6>
@@ -249,7 +265,7 @@ const Header = () => {
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
                                                         <div>
-                                                            <Image className="avatar-40 rounded" src={user3} alt=""/>
+                                                            <Image className="avatar-40 rounded" src={user3} alt="" />
                                                         </div>
                                                         <div className="ms-3">
                                                             <h6 className="mb-0 ">Why do we use it?</h6>
@@ -260,7 +276,7 @@ const Header = () => {
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
                                                         <div>
-                                                            <Image className="avatar-40 rounded" src={user4} alt=""/>
+                                                            <Image className="avatar-40 rounded" src={user4} alt="" />
                                                         </div>
                                                         <div className="ms-3">
                                                             <h6 className="mb-0 ">Variations Passages</h6>
@@ -271,7 +287,7 @@ const Header = () => {
                                                 <Link to="#" className="iq-sub-card d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center">
                                                         <div>
-                                                            <Image className="avatar-40 rounded" src={user5} alt=""/>
+                                                            <Image className="avatar-40 rounded" src={user5} alt="" />
                                                         </div>
                                                         <div className="ms-3">
                                                             <h6 className="mb-0 ">Lorem Ipsum generators</h6>
@@ -285,7 +301,7 @@ const Header = () => {
                                 </Dropdown>
                                 <Dropdown as="li" className="nav-item">
                                     <Dropdown.Toggle href="#" as={Button} bsPrefix="d-flex align-items-center search-toggle" >
-                                        <Image src={user1} className="img-fluid rounded-circle me-3" alt="user"/>
+                                        <Image src={user1} className="img-fluid rounded-circle me-3" alt="user" />
                                         <div className="caption">
                                             <h6 className="mb-0 line-height">Bni Cyst</h6>
                                         </div>

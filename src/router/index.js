@@ -15,7 +15,7 @@ import ASCClient from '@amityco/js-sdk';
 const IndexRouters = () => {
     useEffect(() => {
         const ascClient = new ASCClient({ apiKey: process.env.REACT_APP_API_KEY });
-        ascClient.registerSession({ userId: "SiriusUser", displayName: "SiriusUser" })
+        ascClient.registerSession({ userId: process.env.REACT_APP_USERID, displayName: process.env.REACT_APP_DISPLAYNAME })
     }, [])
 
     return (

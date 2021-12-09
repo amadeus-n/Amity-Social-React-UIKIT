@@ -22,9 +22,10 @@ const Default = () => {
             <div className="wrapper">
                 <Sidebar />
                 <Header />
-                <RightSidebar />
+                {//<RightSidebar />
+                }
                 <div id="content-page" className="content-page">
-                    <DefaultRouter/>
+                    <DefaultRouter />
                 </div>
             </div>
             <Footer />
