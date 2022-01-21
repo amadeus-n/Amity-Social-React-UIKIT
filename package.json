@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@amityco/js-sdk": "^5.8.1",
+    "@amityco/js-sdk": "^5.9.0",
+    "@amityco/ts-sdk": "^0.0.1-beta.10",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fullcalendar/bootstrap": "^5.9.0",
     "@fullcalendar/core": "^5.9.0",
