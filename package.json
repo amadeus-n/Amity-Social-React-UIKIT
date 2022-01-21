@@ -22,9 +22,12 @@
     "bootstrap": "^5.1.0",
     "core-js": "^3.19.2",
     "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-favicon": "^2.0.1",
     "fullcalendar-interaction": "^5.3.3",
     "jquery": "^3.6.0",
     "leaflet": "^1.7.1",
+    "path": "^0.12.7",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.2",
@@ -46,7 +49,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
