@@ -14,7 +14,8 @@ import img9 from '../../assets/images/small/img-1.jpg'
 import img10 from '../../assets/images/small/img-2.jpg'
 import loader from '../../assets/images/page-img/page-load-loader.gif'
 
-import { CommunityRepository, PostRepository, ReactionRepository } from '@amityco/js-sdk'
+import { CommunityRepository, PostRepository } from '@amityco/js-sdk'
+
 import { CommunityCard } from './community'
 import { NewsFeeds } from './newsfeed'
 
@@ -43,16 +44,6 @@ const Index = () => {
             });
         })
         getNewsFeeds()
-
-        const getReaction = (() => {
-            const liveCollection = ReactionRepository.queryReactions({ referenceId: 'b7b885c30df8498f9d7d84f11f1ea0cf', referenceType: 'post' });
-            liveCollection.on('dataUpdated', reactions => {
-                // reactions are successfully fetched
-                console.log(reactions)
-            });
-        });
-
-        getReaction()
     }, [])
 
     return (

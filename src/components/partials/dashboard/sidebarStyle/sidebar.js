@@ -50,6 +50,9 @@ const Sidebar = () => {
                         <li className={`${location.pathname === '/dashboards/app/groups' || location.pathname === '/dashboards/app/group-detail' ? 'active' : '' }` }>
                            <Link to="/dashboards/app/groups" ><i className="las la-users"></i><span>Communities</span></Link>
                         </li>
+                        <li className={`${location.pathname === '/dashboards/app/live-stream' || location.pathname === '/dashboards/app/group-detail' ? 'active' : '' }` }>
+                           <Link to="/dashboards/app/live-stream" ><i className="las la-users"></i><span>Communities</span></Link>
+                        </li>
                         {/* <li className={`${location.pathname === '/dashboards/app/profile-images' ? 'active' : ''}`}>
                            <Link to="/dashboards/app/profile-images" ><i className="las la-image"></i><span>Profile Image</span></Link>
                         </li> */}
