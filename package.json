@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@amityco/js-sdk": "^5.8.1",
+    "@blueprintjs/core": "^3.52.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fullcalendar/bootstrap": "^5.9.0",
     "@fullcalendar/core": "^5.9.0",
