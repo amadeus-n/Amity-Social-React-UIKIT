@@ -43,9 +43,10 @@ const Index = () => {
                 setNewsFeedsList(models)
             });
         })
+        
         getNewsFeeds()
     }, [])
-
+    console.log("getNewsFeeds");
     return (
         <>
             <Container>
